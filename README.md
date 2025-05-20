@@ -1,75 +1,52 @@
-# whatsapp-backend
+# Project API - LoopBack 4 Enterprise Edition 🚀
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+**Desarrollo altamente escalable, seguro y documentado basado en SOLID, Docker y TypeScript**
 
-## Install dependencies
+---
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+## 📌 Características Principales
+- **LoopBack 4** (última versión) con **TypeScript** y **Node.js**
+- **Seguridad Blindada**: JWT, Helmet, CORS, Rate Limiting, Validación de Entrada
+- **Documentación Swagger/OpenAPI** integrada
+- **Arquitectura SOLID**: Capas claras (Modelos → Repositorios → Servicios → Controladores)
+- **Dockerizado**: Ready para CI/CD y despliegues en cloud
+- **Multi-DB**: MongoDB actual + Migración futura a PostgreSQL
+- **Prettier**: Formateo de código consistente
+- **Escalabilidad Enterprise**: Clustering, logging estructurado, health checks
 
-```sh
+---
+
+## 🛠 Requisitos
+- Node.js v16+
+- Docker & Docker Compose
+- MongoDB (local o remoto)
+- npm/yarn
+
+---
+
+## 🚀 Inicio Rápido
+
+```bash
+# 1. Clonar repo
+git clone [repo-url] && cd project-api
+
+# 2. Instalar dependencias
 npm install
-```
 
-To only install resolved dependencies in `package-lock.json`:
+# 3. Configurar entorno (crear .env basado en .env.example)
+cp .env.example .env
 
-```sh
-npm ci
-```
+# 4. Levantar servicios con Docker
+docker-compose up -d --build
 
-## Run the application
+# 5. Iniciar servidor en desarrollo
+npm run start:dev
 
-```sh
-npm start
-```
+#6. Estructura del Proyecto
+src/
+├── models/          # 🧩 Entidades de dominio
+├── repositories/    # 📦 Acceso a datos (Mongo/PostgreSQL)
+├── services/        # 🛠 Lógica de negocio
+├── controllers/     # 🎮 Endpoints API
+└── datasources/     # 🔌 Configuraciones DB
 
-You can also run `node .` to skip the build step.
-
-Open http://127.0.0.1:3000 in your browser.
-
-## Rebuild the project
-
-To incrementally build the project:
-
-```sh
-npm run build
-```
-
-To force a full build by cleaning up cached artifacts:
-
-```sh
-npm run rebuild
-```
-
-## Fix code style and formatting issues
-
-```sh
-npm run lint
-```
-
-To automatically fix such issues:
-
-```sh
-npm run lint:fix
-```
-
-## Other useful commands
-
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
-
-## Tests
-
-```sh
-npm test
-```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
-
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
